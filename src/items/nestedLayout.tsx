@@ -2,13 +2,13 @@
 // import Footer from './footer'
 
 export default function NestedLayout({ children }) {
-  return (
+    return (
     <>
-      {/* <Navbar /> */}
-      <div>Nested</div>
-      <main>{children}</main>
-      {/* <Footer /> */}
-      <div>layout</div>
+        {/* <Navbar /> */}
+        <div>Nested</div>
+        <main>{children}</main>
+        {/* <Footer /> */}
+        <div>layout</div>
     </>
-  )
+    )
 }
