@@ -10,6 +10,10 @@
     },
     "author": "Abraham Duno",
     "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/3dunoabraham/tnt"
+    },
     "dependencies": {
         "next": "^13.1.6",
         "next-auth": "^4.19.2",
