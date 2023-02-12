@@ -17,7 +17,7 @@ const Page: NextPageWithLayout = () => {
 Page.getLayout = function getLayout(page: ReactElement) {
     return (
     <Layout>
-        <Head><title>A Title</title></Head>
+        <Head><title>Inventory</title></Head>
         <SidebarContainer sidebar={<FilterSidebar/>}>{page}</SidebarContainer>
     </Layout>
     )

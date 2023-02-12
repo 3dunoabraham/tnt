@@ -17,10 +17,9 @@ const Page: NextPageWithLayout = () => {
 Page.getLayout = function getLayout(page: ReactElement) {
     return (
     <Layout>
-        <Head><title>A Title</title></Head>
         <SidebarContainer sidebar={<SessionSidebar/>}>{page}</SidebarContainer>
     </Layout>
-  )
+    )
 }
 
 export default Page

@@ -1,0 +1,108 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/projects/servicepad/ims_f_e-duno/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "F:/projects/servicepad/ims_f_e-duno",
+        "testIgnore": [],
+        "testMatch": [
+          "scripts/playwright/imsLanding.unitAdd.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "scripts/playwright/jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "F:\\projects\\servicepad\\ims_f_e-duno\\playwright.config.ts",
+    "rootDir": "F:/projects/servicepad/ims_f_e-duno",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.29.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "scripts\\playwright\\imsLanding.unitAdd.ts",
+      "file": "scripts/playwright/imsLanding.unitAdd.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "IMS Landing, enter add unit page, save new unit (with manufacturer)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-02-01T11:58:14.636Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\projects\\servicepad\\ims_f_e-duno\\test-results\\scripts-playwright-imsLanding.unitAdd.ts-IMS-L-5d9f7--add-unit-page-save-new-unit-with-manufacturer-\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fdd02e9efd2389adc709-a048955ae977de3daed9",
+          "file": "scripts/playwright/imsLanding.unitAdd.ts",
+          "line": 12,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
