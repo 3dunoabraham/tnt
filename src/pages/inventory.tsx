@@ -1,18 +1,26 @@
 import type { ReactElement } from 'react'
-import Layout from '@/src/partials/Layout'
-import NestedLayout from '@/src/items/NestedLayout'
-import type { NextPageWithLayout } from './_app'
-import LoginBtn from "@/src/items/LoginBtn";
-import AppClientDesc from "@/src/items/AppClientDesc";
-import Link from 'next/link';
+import Head from 'next/head'
 
-export default function Page() {
-    return (
-    <div className='flex'>
-        <div className='flex _ddg'>
-            <Link href="/"><h2 className="">Home</h2></Link>
-        </div>
-        <LoginBtn><AppClientDesc /></LoginBtn>
-    </div>
+
+import type { NextPageWithLayout } from '@/src/pages/_app'
+import Layout from '@/src/partials/Layout'
+import SidebarContainer from '@/src/partials/ims/SidebarContainer'
+import Inventory from '@/src/partials/inventory/Inventory';
+import FilterSidebar from "@/src/partials/ims/FilterSidebar";
+
+const Page: NextPageWithLayout = () => {
+  return (
+        <div className='flex-center w-100 h-100vh'><Inventory /></div>
     )
 }
+
+Page.getLayout = function getLayout(page: ReactElement) {
+    return (
+    <Layout>
+        <Head><title>A Title</title></Head>
+        <SidebarContainer sidebar={<FilterSidebar/>}>{page}</SidebarContainer>
+    </Layout>
+    )
+}
+
+export default Page

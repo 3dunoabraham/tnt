@@ -1,4 +1,4 @@
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,9 +9,9 @@ export default function Component({}) {
 
     return (
     <div className="flex-col">
-        <div className='tx-xxxl tx-bold-2 opaci-25 tx-ls-8 py-8'>I M S</div>
+        <div className='tx-xxxl tx-bold-2 opaci-25 tx-ls-8'>I M S</div>
         {!!session &&
-            <div className="flex-wrap">
+            <div className="flex-wrap ma-8">
                 <Link href="/inventory">
                     <div  className="ims-cardlink" onClick={()=>{s__loadingNewPage(true)}} >
                         <h2 className="">Inventory &uarr;</h2><p className="">Unit List</p>
