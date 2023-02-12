@@ -1,5 +1,5 @@
-import LoginBtn from "@/src/items/login-btn";
-import AppServerDesc from "@/src/items/appServerDesc";
+import LoginBtn from "@/src/items/LoginBtn";
+import AppServerDesc from "@/src/items/AppServerDesc";
 
 
 export default function Page() {

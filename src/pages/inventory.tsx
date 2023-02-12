@@ -1,26 +1,18 @@
 import type { ReactElement } from 'react'
-import Layout from '@/src/items/layout'
-import NestedLayout from '@/src/items/nestedLayout'
+import Layout from '@/src/partials/Layout'
+import NestedLayout from '@/src/items/NestedLayout'
 import type { NextPageWithLayout } from './_app'
-import LoginBtn from "@/src/items/login-btn";
-import AppClientDesc from "@/src/items/appClientDesc";
+import LoginBtn from "@/src/items/LoginBtn";
+import AppClientDesc from "@/src/items/AppClientDesc";
 import Link from 'next/link';
 
-const Page: NextPageWithLayout = () => {
+export default function Page() {
     return (
-    <div className='flex '>
-        <Link href="/"><h2 className="">Home</h2></Link>
+    <div className='flex'>
+        <div className='flex _ddg'>
+            <Link href="/"><h2 className="">Home</h2></Link>
+        </div>
         <LoginBtn><AppClientDesc /></LoginBtn>
     </div>
     )
 }
-
-Page.getLayout = function getLayout(page: ReactElement) {
-    return (
-    <Layout>
-        <NestedLayout>{page}</NestedLayout>
-    </Layout>
-    )
-}
-
-export default Page

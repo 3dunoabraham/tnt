@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import Layout from '@/src/items/layout'
+import Layout from '@/src/partials/Layout'
 import type { NextPageWithLayout } from './_app'
-import AppClientDesc from "@/src/items/appClientDesc";
+import AppClientDesc from "@/src/items/AppClientDesc";
 
 const Page: NextPageWithLayout = () => {
     return (
