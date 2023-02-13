@@ -7,11 +7,11 @@ import InventoryPageComponent from '@/src/items/pages/inventory'
 import { useQuery } from "@tanstack/react-query";
 import { fetchJsonArray } from "@/scripts/helpers/fetchHelper";
 import { API_UNITS } from "@/scripts/constants/api";
+import { LoadingInventory } from "@/src/items/pages/inventory/LoadingInventory";
 
 export default function Component({}) {
     const app = useContext(AppContext)
     const { data: session } = useSession();
-    const [zzz, s__zzz] = useState<boolean>(true);
     
     const q_units = useQuery({queryKey: ['unitData'], queryFn: async () => await fetchJsonArray(API_UNITS, "Units"),})
 
@@ -32,8 +32,8 @@ export default function Component({}) {
         <hr className="my-2"/>
         {/* <SidebarFilterToolbar {...{filtersMap, filtersMap_do, configObj:{},}}/> */}
         <div className="mt-4 mb-150 h-100 flex-col flex-justify-start " >
-            {/* {zzz && <LoadingInventory /> } */}
-            {(!q__units || !q__units.length) && <> 
+            {q_units.isLoading && <LoadingInventory /> }
+            {(!q_units.isLoading && !q__units.length) && <> 
                 <div className='tx-xl opaci-10 tx-ls-5 pt-100 pb-8 tx-center w-100 tx-center'>No Units Found</div>
             </>}
             {!!q__units && !!q__units.length &&<>
