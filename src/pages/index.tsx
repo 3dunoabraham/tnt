@@ -17,6 +17,7 @@ const Page: NextPageWithLayout = () => {
 Page.getLayout = function getLayout(page: ReactElement) {
     return (
     <Layout>
+        <Head><title>IMS</title></Head>
         <SidebarContainer sidebar={<SessionSidebar/>}>{page}</SidebarContainer>
     </Layout>
     )
