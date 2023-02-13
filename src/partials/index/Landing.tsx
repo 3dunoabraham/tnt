@@ -11,7 +11,7 @@ export default function Component({}) {
     <div className="flex-col">
         {loadingNewPage && <div className="tx-lg opaci-10 tx-ls-8 mb-8">Loading</div>}
         <div className='tx-xxxl tx-bold-2 opaci-25 tx-ls-8'>I M S</div>
-        {!!session && !loadingNewPage &&
+        {/* !!session && */ !loadingNewPage &&
             <div className="flex-wrap ma-8">
             <div className="ims-button-primary" onClick={()=>{s__loadingNewPage(true)}}>
                 <Link  className="px-2 py-4 tx-" href="/unit/add">
