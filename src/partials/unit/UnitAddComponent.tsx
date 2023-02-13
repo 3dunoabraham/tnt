@@ -135,7 +135,7 @@ export default function UnitAddComponent({
         return (
         <div className={`ims-body-wide w-100`}>
             <div className="ims-body-inner">
-                <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Detail`} />
+                <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Add Unit`} />
                 <div className='py-6'><PagePlaceholder /></div>
             </div>
         </div>
