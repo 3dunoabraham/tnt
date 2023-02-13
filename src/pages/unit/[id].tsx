@@ -23,7 +23,6 @@ const Page: NextPageWithLayout = () => {
     ,[q_foreigns])
 
     if (!id) {return <div></div>}
-    if (!q__foreigns) {return <div></div>}
     return (
         <div className='flex-center w-100 h-min-100vh'><UnitViewEdit id={id} optMapObj={q__foreigns} /></div>
     )

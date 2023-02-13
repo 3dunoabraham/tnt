@@ -10,7 +10,7 @@ import { API_UNIT_OPTS_BASE, API_ORGS, API_DOCS, API_NOTES } from '@/scripts/con
 import { fetchAndParseOrgTypes, fetchJsonArray, fetchParsedUnit, fetchUnitStatuses, parseNoteObj
 } from '@/scripts/helpers/fetchHelper';
 import { DEFAULT_UNIT, DEFAULT_UNIT_OPTS } from '@/scripts/constants/unit'
-import { UnitPageComponent } from '@/src/partials/unit'
+import { UnitPageComponent } from '@/src/partials/unit/UnitPageComponent'
 import { BreadCrumbs } from '@/src/items/atoms/BreadCrumbs'
 import { ErrorBlock } from '@/src/items/atoms/ErrorBlock'
 import { PagePlaceholder } from '@/src/items/atoms/PagePlaceholder'
@@ -82,7 +82,7 @@ export default function UnitPage({
 
 
     /****** HTML ******/
-    if (q_unit.isLoading) {
+    if (q_unit.isLoading || !optMapObj) {
         return (
         <div className={`ims-body-wide w-100`}>
             <main className="ims-body-inner">
