@@ -20,6 +20,22 @@ export async function fetchUnitForeigns() {
         return DEFAULT_UNIT_FOREIGNS
     }
 }
+
+export async function fetchUnitPageData() {
+    try {
+        let model_styles = await fetchJsonArray(API_UNIT_OPTS_BASE+"model_styles", "Model Styles")
+        let {inventory_statuses, sales_statuses, title_statuses, conditions} = await fetchUnitStatuses()
+        let orgsList = await fetchJsonArray(API_ORGS,"Orgs")
+        let {manufacturers, distributors, dealers, owners } = await fetchAndParseOrgTypes(orgsList)
+            
+        return {
+            model_styles, inventory_statuses, sales_statuses, title_statuses, conditions,
+            orgsList, distributors, manufacturers, dealers, owners,
+        }
+    } catch (err) {
+        return DEFAULT_UNIT_OPTS
+    }
+}
 export async function fetchUnitOptsObj() {
     try {
         let model_styles = await fetchJsonArray(API_UNIT_OPTS_BASE+"model_styles", "Model Styles")

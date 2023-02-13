@@ -17,9 +17,9 @@ import { PagePlaceholder } from '@/src/items/atoms/PagePlaceholder'
 // ReactFunctionPageComponent
 export default function UnitPage({
     // online, id, optMapObj,
-    id
+    id, optMapObj,
 }) {
-    const optMapObj = DEFAULT_UNIT_OPTS
+    // const optMapObj = DEFAULT_UNIT_OPTS
     const online = true
     /****** DATA ******/
     // const router = useRouter()
