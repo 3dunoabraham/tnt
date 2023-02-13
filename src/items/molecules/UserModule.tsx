@@ -40,7 +40,7 @@ export const UserModule = ({/* amIDev, s__amIDev,  */ isVisible})=> {
             {app.user.name == "ADMIN" && <BsFillShieldLockFill  />}
             {app.user.name != "ADMIN" && <FiLogOut  />}
         </div>
-        {false && <div className="flex-col flex-align-start w-min-100px ims-bg-faded pa-1 bord-r-8">
+        {/* {false && <div className="flex-col flex-align-start w-min-100px ims-bg-faded pa-1 bord-r-8">
             {Object.keys(app.user.grants.unit).map((aGrant,index)=>{
                 return (
                     <div  key={index} className="flex flex-justify-between w-100">
@@ -49,6 +49,6 @@ export const UserModule = ({/* amIDev, s__amIDev,  */ isVisible})=> {
                     </div>
                 )
             })}
-        </div>}
+        </div>} */}
     </>)
 }

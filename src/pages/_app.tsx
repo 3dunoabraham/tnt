@@ -3,8 +3,8 @@ import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import 'csscss'
-import '@/style/reset.css'
-import '@/style/ims-theme.css'
+import '@/styles/reset.css'
+import '@/styles/ims-theme.css'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     getLayout?: (page: ReactElement) => ReactNode

@@ -1,4 +1,4 @@
-import { SalesStatusBadgePlus } from '@/components/pages/unit/SalesStatusBadgePlus';
+import { SalesStatusBadgePlus } from '@/src/items/pages/unit/SalesStatusBadgePlus';
 // ReactFunctionComponent
 export const StandardTableRest = ({
     item, displayConfigObj

@@ -5,7 +5,7 @@ import { BsTrash } from "react-icons/bs"
 
 import { API_NOTES } from "@/scripts/constants/api"
 import { fetchDelete, fetchPost } from "@/scripts/helpers/fetchHelper"
-import { AlertComponent } from "@/components/molecules/AlertComponent"
+import { AlertComponent } from "@/src/items/molecules/AlertComponent"
 import { DEFAULT_ALERT_MAPARRAY } from "@/scripts/constants"
 import { AppContext } from "@/scripts/contexts/AppContext"
 // ReactFunctionComponent

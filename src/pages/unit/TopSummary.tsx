@@ -1,4 +1,4 @@
-import { SalesStatusBadge } from '@/components/pages/unit/SalesStatusBadge';
+import { SalesStatusBadge } from '@/src/items/pages/unit/SalesStatusBadge';
 // ReactFunctionComponent
 export const UnitTopSummary =({ unit }) =>{
     return (

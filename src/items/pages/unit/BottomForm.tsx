@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 
 
-import { BottomSectionInputModule } from '@/components/pages/unit/BottomSectionInputModule'
-import { BottomSectionOutputModule } from '@/components/pages/unit/BottomSectionOutputModule'
+import { BottomSectionInputModule } from '@/src/items/pages/unit/BottomSectionInputModule'
+import { BottomSectionOutputModule } from '@/src/items/pages/unit/BottomSectionOutputModule'
 import { fetchJsonArray } from '@/scripts/helpers/fetchHelper'
 import { API_PEOPLE_BASE, API_UNIT_OPTS_BASE } from '@/scripts/constants/api'
 import { DEFAULT_COLOR_OBJARRAY, DEFAULT_HITCH_TYPE_OBJARRAY } from '@/scripts/constants/unit'

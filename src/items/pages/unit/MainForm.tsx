@@ -5,9 +5,9 @@ import { useContext, useMemo } from 'react'
 import { AppContext } from '@/scripts/contexts/AppContext'
 import { useArrayMapPlus } from '@/scripts/helpers/useHooksHelper'
 import { IUnit, IUnitBaseOpts } from '@/scripts/constants/unit'
-import { MainFormInputSelect } from '@/components/pages/unit/MainFormInputSelect'
-import { OInputNImages } from '@/components/molecules/OInputNImages'
-import { OInputNMeasure } from '@/components/molecules/OInputNMeasure'
+import { MainFormInputSelect } from '@/src/items/pages/unit/MainFormInputSelect'
+import { OInputNImages } from '@/src/items/molecules/OInputNImages'
+import { OInputNMeasure } from '@/src/items/molecules/OInputNMeasure'
 import CSS from '@/styles/modules/UnitMainForm.module.css'
 export interface UnitMainFormProps {
     updateNewData?: any;

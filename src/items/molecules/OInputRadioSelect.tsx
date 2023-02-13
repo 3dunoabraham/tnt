@@ -4,7 +4,7 @@ import { BsTrash } from 'react-icons/bs'
 
 // import { isDevEnvironment, dd, dlog } from '@/scripts/helpers/devHelper';
 import { validateInteger } from '@/scripts/helpers/validationHelper';
-import { InputSelect, InputSelectProps } from '@/components/molecules/InputSelect'
+import { InputSelect, InputSelectProps } from '@/src/items/molecules/InputSelect'
 export interface OInputRadioSelectProps {
     theInputObj: any; mapmapmap?; key:any; formObject?:any; valueObj?:any; optObj: any;
 }

@@ -1,4 +1,4 @@
-import { InputSelect } from '@/components/molecules/InputSelect'
+import { InputSelect } from '@/src/items/molecules/InputSelect'
 export interface MainFormInputSelectProps {
     inputName?: string; value?: string; optName?: any; optMap?: any;     
     display?: string; defaultDisplay?: string; label?: string; sublabel?: string;

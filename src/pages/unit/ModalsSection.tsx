@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { BsCollection, BsFileEarmark, BsPencilSquare } from "react-icons/bs";
 
 
-import { StandardModal } from "@/components/molecules/StandardModal";
-import { DocumentsCRUD } from "@/components/pages/unit/DocumentsCRUD";
-import { NotesCRUD } from "@/components/pages/unit/NotesCRUD";
-import { LogsCRUD } from "@/components/pages/unit/LogsCRUD";
+import { StandardModal } from "@/src/items/molecules/StandardModal";
+import { DocumentsCRUD } from "@/src/items/pages/unit/DocumentsCRUD";
+import { NotesCRUD } from "@/src/items/pages/unit/NotesCRUD";
+import { LogsCRUD } from "@/src/items/pages/unit/LogsCRUD";
 // ReactFunctionComponent
 export const UnitModalsSection = ({
     unit, editMode,

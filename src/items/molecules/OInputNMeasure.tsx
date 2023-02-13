@@ -4,7 +4,7 @@ import { useEffectOnce, useMap, MapOrEntries } from 'usehooks-ts'
 
 import { useDeviceXS_LG } from '@/scripts/helpers/useHooksHelper';
 import { validateInteger } from '@/scripts/helpers/validationHelper'
-import { InputSelect } from '@/components/molecules/InputSelect'
+import { InputSelect } from '@/src/items/molecules/InputSelect'
 import CSS from '@/styles/modules/NMeasure.module.css'
 export interface OInputNMeasureProps {
     inputName?: string;

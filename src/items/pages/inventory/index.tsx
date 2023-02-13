@@ -1,7 +1,7 @@
-import { InputSelect } from "@/components/molecules/InputSelect"
-import { StandardTable } from "@/components/molecules/StandardTable"
-import { StandardTablePagination } from "@/components/molecules/StandardTablePagination"
-import { InventoryExportCSV } from "@/components/pages/inventory/ExportCsv"
+import { InputSelect } from "@/src/items/molecules/InputSelect"
+import { StandardTable } from "@/src/items/molecules/StandardTable"
+import { StandardTablePagination } from "@/src/items/molecules/StandardTablePagination"
+import { InventoryExportCSV } from "@/src/items/pages/inventory/ExportCsv"
 import { API_UNITS } from "@/scripts/constants/api"
 import { AppContext } from "@/scripts/contexts/AppContext"
 import { fetchDelete } from "@/scripts/helpers/fetchHelper"
@@ -59,16 +59,18 @@ export default function Component({filteredUnits}) {
 
 
     return (<>
-    <div className="" >
+    <div className="w-100" >
         <StandardTable
             displayConfigObj={tableConfigObj}
             {...{s__selectedId,selectedId}}
             theArray={paginatedUnits} deleteUnit={deleteUnit}
         />
     </div>
-    <StandardTablePagination {...{currentPage,s__currentPage, lastPage}} />
+    <div className="w-100" >
+        <StandardTablePagination {...{currentPage,s__currentPage, lastPage}} />
+    </div>
     {isClient && <>
-        <div className="flex flex-justify-end mt-2">
+        <div className="flex flex-justify-end mt-2 w-100">
             <div className="tx-sm flex-center pr-2 opaci-50">
                 Items Per Page
             </div>

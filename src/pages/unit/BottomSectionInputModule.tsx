@@ -7,11 +7,11 @@ import { tenYearsAgoDateString, tenYearsFutureDateString } from '@/scripts/helpe
 import { validateFloat, validateInteger, validateBigint, validateStringLength
 } from '@/scripts/helpers/validationHelper'
 import { jssWSwitch } from '@/scripts/helpers/type/stringHelper'
-import { InputSelect } from '@/components/molecules/InputSelect'
+import { InputSelect } from '@/src/items/molecules/InputSelect'
 import { InputText } from '@/components/atoms/InputText'
-import { InputDate } from '@/components/molecules/InputDate'
-import { InputNEnum } from '@/components/molecules/InputNEnum'
-import { OInputRadioSelect } from '@/components/molecules/OInputRadioSelect'
+import { InputDate } from '@/src/items/molecules/InputDate'
+import { InputNEnum } from '@/src/items/molecules/InputNEnum'
+import { OInputRadioSelect } from '@/src/items/molecules/OInputRadioSelect'
 export interface BottomSectionInputModuleProps {
     uid: any; inputName: string; label: string; sublabel?: string; 
     inputsMapObj: any; optsObj?: any; values: any; flex?: any;

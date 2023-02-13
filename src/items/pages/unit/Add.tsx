@@ -7,15 +7,15 @@ import { useEffectOnce } from 'usehooks-ts'
 // import { DEFAULT_UNIT, IUnit } from '@/scripts/constants/unit'
 import { DEFAULT_UNIT, IUnit, DEFAULT_DOC_CATEGORIES } from '@/scripts/constants/unit'
 import { useUnloadHandler } from '@/scripts/helpers/useHooksHelper';
-import { UnitMainForm } from '@/components/pages/unit/MainForm'
-import { UnitTopForm } from '@/components/pages/unit/TopForm'
-import { UnitBottomForm } from '@/components/pages/unit/BottomForm'
-import { UnitModalsSection } from '@/components/pages/unit/ModalsSection';
-import { UnitSaveEditButtonLoadings } from '@/components/pages/unit/SaveEditButtonLoadings';
+import { UnitMainForm } from '@/src/items/pages/unit/MainForm'
+import { UnitTopForm } from '@/src/items/pages/unit/TopForm'
+import { UnitBottomForm } from '@/src/items/pages/unit/BottomForm'
+import { UnitModalsSection } from '@/src/items/pages/unit/ModalsSection';
+import { UnitSaveEditButtonLoadings } from '@/src/items/pages/unit/SaveEditButtonLoadings';
 import { fetchPost, parseChangedDataToAddObj } from '@/scripts/helpers/fetchHelper';
 import { SectionPlaceholder } from '@/components/atoms/SectionPlaceholder';
 import { AppContext } from '@/scripts/contexts/AppContext';
-import { UnitSuccessBlock } from '@/components/pages/unit/SuccessBlock';
+import { UnitSuccessBlock } from '@/src/items/pages/unit/SuccessBlock';
 import { unit2Form } from '@/scripts/helpers/type/unitHelper';
 import { API_UNITS } from '@/scripts/constants/api';
 export interface UnitAddComponentProps {

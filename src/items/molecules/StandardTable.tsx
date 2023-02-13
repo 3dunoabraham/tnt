@@ -1,7 +1,7 @@
 import { BsArrowDown, BsSearch } from 'react-icons/bs'
 
 
-import { StandardTableRest } from '@/components/molecules/StandardTableRest';
+import { StandardTableRest } from '@/src/items/molecules/StandardTableRest';
 import { AiOutlineEllipsis } from 'react-icons/ai';
 import { useContext, useRef, useState } from 'react';
 import { AppContext } from '@/scripts/contexts/AppContext';
@@ -72,7 +72,7 @@ export const StandardTable = ({
                                 </div>
                             </a>
 
-                            {app.user.grants.unit.delete && 
+                            {/* app.user.grants.unit.delete &&  */
                                 <div className="bg-b-hov-10 bord-r-8  flex-center px-3 pt-1 pb-3 ma-1 pos-rel "
                                     onClick={()=>{s__isMenu(isMenu == index ? -1 : index );}}
                                 >

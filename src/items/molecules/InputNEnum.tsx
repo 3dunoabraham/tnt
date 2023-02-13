@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react'
 
 
 // import { isDevEnvironment, dd } from '@/scripts/helpers/devHelper';
-import { InputSelect } from '@/components/molecules/InputSelect'
+import { InputSelect } from '@/src/items/molecules/InputSelect'
 export interface InputNEnumProps {
     value?: any; sublabel?: string; label?: string;  inputName?: string; display?: string;
     optMap: any; 

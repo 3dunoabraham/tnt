@@ -11,11 +11,11 @@ import { API_IMAGE_UPLOAD_BASE, STATIC_IMAGE_BASE, API_IMAGES,
     API_INVALID_IMAGE_ALREADY_LOADING,API_INVALID_IMAGE_FILETYPE, API_INVALID_IMAGE_CORRUPT,
 } from '@/scripts/constants/api'
 import { filename2Extension, filename2Type, isValidImgExt} from '@/scripts/helpers/type/stringHelper'
-import { StandardModal } from '@/components/molecules/StandardModal'
+import { StandardModal } from '@/src/items/molecules/StandardModal'
 import { AppContext } from '@/scripts/contexts/AppContext';
 import { SliderCarousel } from '@/components/organisms/SliderCarousel';
 import CSS from '@/styles/modules/Slider.module.css'
-import { InputImage } from '@/components/molecules/InputImage';
+import { InputImage } from '@/src/items/molecules/InputImage';
 type I_OInputNImages = {
     uid: string; filelistString: string;
     config?: any; 

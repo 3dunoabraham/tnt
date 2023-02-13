@@ -4,7 +4,7 @@ import { BsChevronDown, BsChevronUp, BsX, BsPlusLg } from 'react-icons/bs'
 
 
 import { jss, isEqInLowerCase, isIncInLowerCase } from '@/scripts/helpers/type/stringHelper'
-import { PostButton } from '@/components/atoms/PostButton'
+import { PostButton } from '@/src/items/atoms/PostButton'
 import CSS from '@/styles/modules/Select.module.css'
 export interface InputSelectProps {
     refId?: string; inputName?: string; display?: string; 

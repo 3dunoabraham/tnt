@@ -2,8 +2,8 @@ import { useContext, useEffect, useState } from 'react'
 
 
 import { dd } from '@/scripts/helpers/devHelper'
-import { FileJustUploaded } from "@/components/molecules/FileJustUploaded"
-import { InputFile } from "@/components/molecules/InputFile"
+import { FileJustUploaded } from "@/src/items/molecules/FileJustUploaded"
+import { InputFile } from "@/src/items/molecules/InputFile"
 import { API_DOCS, API_DOC_UPLOAD_BASE, API_INVALID_DOC_FILETYPE, API_INVALID_IMAGE_CORRUPT
 } from '@/scripts/constants/api'
 import { DEFAULT_DOC_CATEGORIES } from '@/scripts/constants/unit'

@@ -10,7 +10,7 @@ import FilterSidebar from "@/src/partials/ims/FilterSidebar";
 
 const Page: NextPageWithLayout = () => {
   return (
-        <div className='flex-center w-100 h-100vh'><Inventory /></div>
+        <div className='flex-center w-100 h-min-100vh'><Inventory /></div>
     )
 }
 
