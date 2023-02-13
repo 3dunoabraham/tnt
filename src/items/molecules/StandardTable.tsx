@@ -5,6 +5,7 @@ import { StandardTableRest } from '@/src/items/molecules/StandardTableRest';
 import { AiOutlineEllipsis } from 'react-icons/ai';
 import { useContext, useRef, useState } from 'react';
 import { AppContext } from '@/scripts/contexts/AppContext';
+import Link from 'next/link';
 // ReactFunctionComponent
 export const StandardTable = ({
     theArray, s__selectedId, selectedId, displayConfigObj,
@@ -47,7 +48,7 @@ export const StandardTable = ({
                         <div 
                             className={`  opaci-cahov--50  Q_xs_sm_flex-col flex    pos-rel `}
                         >
-                            <a href={`/unit/${item.uid}`} className="flex-justify-start w-20 py-3 opaci-cbhov--50 " >
+                            <Link href={`/unit/${item.uid}`} className="flex-justify-start w-20 py-3 opaci-cbhov--50 " >
                                 <div className=" " onClick={() => {s__selectedId(index)}}>
                                     <div className="px-3 flex">
                                         {selectedId == index && 
@@ -64,13 +65,13 @@ export const StandardTable = ({
                                         
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
 
-                            <a href={`/unit/${item.uid}`} className="flex-1 flex-center " >
+                            <Link href={`/unit/${item.uid}`} className="flex-1 flex-center " >
                                 <div className="flex-1 flex-center" onClick={() => {;s__selectedId(index)}}>
                                     <StandardTableRest {...{displayConfigObj, item}}  />
                                 </div>
-                            </a>
+                            </Link>
 
                             {/* app.user.grants.unit.delete &&  */
                                 <div className="bg-b-hov-10 bord-r-8  flex-center px-3 pt-1 pb-3 ma-1 pos-rel "
