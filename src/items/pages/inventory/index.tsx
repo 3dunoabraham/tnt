@@ -83,7 +83,7 @@ export default function Component({filteredUnits}) {
                 />
             </div>
         </div>
-        <div className="flex flex-justify-end mt-2">
+        <div className="flex flex-justify-end mt-2 w-100">
             <InventoryExportCSV unitsArray={filteredUnits} />
         </div>
     </>}

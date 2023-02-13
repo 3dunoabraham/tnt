@@ -1,6 +1,6 @@
 import { SalesStatusBadge } from '@/src/items/pages/unit/SalesStatusBadge';
 import { validateStringLength, validateInteger } from '@/scripts/helpers/validationHelper'
-import { InputText } from '@/components/atoms/InputText'
+import { InputText } from '@/src/items/atoms/InputText'
 // ReactFunctionComponent
 export const UnitTopForm =({
     unit,

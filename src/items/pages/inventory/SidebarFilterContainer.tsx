@@ -5,7 +5,7 @@ import { FaHandshake } from 'react-icons/fa'
 
 
 import { useDeviceXS_LG } from '@/scripts/helpers/useHooksHelper';
-import { SidebarFilterSection } from '@/components/organisms/SidebarFilterSection';
+import { SidebarFilterSection } from '@/src/items/organisms/SidebarFilterSection';
 // ReactFunctionComponent
 export const SidebarFilterContainer = ({
     filtersRefObj, 
@@ -43,8 +43,8 @@ export const SidebarFilterContainer = ({
     <div className="ims-bg-primary tx-white box-shadow-4 pos-rel ">
 
         <div className="">
-            <Link  href="/">
-                <a className=" tx-lgx tx-center tx-bold-6 Q_lg_x"><div className="pa-4">INVENTORY</div></a>
+            <Link  href="/" className=" tx-lgx tx-center tx-bold-6 Q_lg_x">
+                <div className="pa-4">INVENTORY</div>
             </Link>
             <div className="py-1 tx-xxl opaci-10 tx-center tx-bold-6 Q_xs_lg ">{<BsBoxSeam />}</div>
             {filtersRefObj && Object.keys(filtersRefObj).map((k,index)=>(

@@ -19,10 +19,8 @@ export const ErrorBlock = ({err=null})=>{
             </div>}
             <img src='/icons/svg/404-error.svg' alt='next' className='w-max-200px'/>
             <h1 className="ims-tx-primary pt-8 ">Oops! This page could not be found.</h1>
-            <Link  href="/">
-                <a className="ims-tx-link tx-bold-9 tx-lgx bord-r-8 mt-3  box-shadow-1">
-                    <div className="py-3 px-6 opaci-hov-25"> Go Home </div>
-                </a>
+            <Link  href="/" className="ims-tx-link tx-bold-9 tx-lgx bord-r-8 mt-3  box-shadow-1">
+                <div className="py-3 px-6 opaci-hov-25"> Go Home </div>
             </Link>
         </div>
     </div>

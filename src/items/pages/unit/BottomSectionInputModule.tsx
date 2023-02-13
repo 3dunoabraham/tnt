@@ -8,7 +8,7 @@ import { validateFloat, validateInteger, validateBigint, validateStringLength
 } from '@/scripts/helpers/validationHelper'
 import { jssWSwitch } from '@/scripts/helpers/type/stringHelper'
 import { InputSelect } from '@/src/items/molecules/InputSelect'
-import { InputText } from '@/components/atoms/InputText'
+import { InputText } from '@/src/items/atoms/InputText'
 import { InputDate } from '@/src/items/molecules/InputDate'
 import { InputNEnum } from '@/src/items/molecules/InputNEnum'
 import { OInputRadioSelect } from '@/src/items/molecules/OInputRadioSelect'

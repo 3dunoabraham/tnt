@@ -13,7 +13,7 @@ import { UnitBottomForm } from '@/src/items/pages/unit/BottomForm'
 import { UnitModalsSection } from '@/src/items/pages/unit/ModalsSection';
 import { UnitSaveEditButtonLoadings } from '@/src/items/pages/unit/SaveEditButtonLoadings';
 import { fetchPost, parseChangedDataToAddObj } from '@/scripts/helpers/fetchHelper';
-import { SectionPlaceholder } from '@/components/atoms/SectionPlaceholder';
+import { SectionPlaceholder } from '@/src/items/atoms/SectionPlaceholder';
 import { AppContext } from '@/scripts/contexts/AppContext';
 import { UnitSuccessBlock } from '@/src/items/pages/unit/SuccessBlock';
 import { unit2Form } from '@/scripts/helpers/type/unitHelper';
