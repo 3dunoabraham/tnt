@@ -18,6 +18,8 @@ import { AppContext } from '@/scripts/contexts/AppContext';
 import { UnitSuccessBlock } from '@/src/partials/unit/SuccessBlock';
 import { unit2Form } from '@/scripts/helpers/type/unitHelper';
 import { API_UNITS } from '@/scripts/constants/api';
+import { BreadCrumbs } from '@/src/items/atoms/BreadCrumbs'
+import { PagePlaceholder } from '@/src/items/atoms/PagePlaceholder'
 export interface UnitAddComponentProps {
     unit?: IUnit;
     optMapObj?: any; docsArray?: any; notesArray?: any;logsArray?: any;
@@ -25,13 +27,13 @@ export interface UnitAddComponentProps {
     refetch?: (deps?) => void;
 }
 // ReactFunctionComponent
-export const UnitAddComponent = ({
+export default function UnitAddComponent({
     unit,
     optMapObj,docsArray = [], notesArray = [],logsArray = [],
     isLoadingRefetching,
     refetch=(deps=[])=>{},
   ...others
-}: UnitAddComponentProps)=>{
+}: UnitAddComponentProps){
     /****** CREATE ******/
     useEffectOnce(()=>{
         setRefreshCount(refreshCount+1)
@@ -129,6 +131,17 @@ export const UnitAddComponent = ({
 
 
     /****** HTML ******/
+    if (!optMapObj) {
+        return (
+        <div className={`ims-body-wide w-100`}>
+            <div className="ims-body-inner">
+                <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Detail`} />
+                <div className='py-6'><PagePlaceholder /></div>
+            </div>
+        </div>
+        )
+    }
+    
     return(<>        
     {(newUID != "") &&
         <div className=''>
@@ -158,63 +171,69 @@ export const UnitAddComponent = ({
             </div>
         </div>
     }
-    {!(newUID != "") &&<>
-        <div className="flex-between Q_xs_md_flex-col">
-            <div className="flex-col pt-3  ">
-                <h1 className="tx-bold-5 ims-tx-dark flex ">
-                    New Unit
-                </h1>
-            </div>
-            
-            {loadings != "" &&
-                <div className='tx-lgx mt-200 flex flex-align-end flex-justify-center   flex-1'>
-                    <div className='ims-badge-faded mx-2 px-2 py-2 '>Loading</div>
-                    <div className=' px-2 py-2 '>Creating New Unit...</div>
+    {!(newUID != "") &&
+    <div className={`ims-body-wide w-100 px-100 Q_xs_sm_px-2`}>
+        <div className="ims-body-inner">
+            <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Add Unit`} />
+            <div className="Q_xs_sm my-2 invisible block">.</div>
+            <div className="flex-between Q_xs_md_flex-col">
+                <div className="flex-col pt-3  ">
+                    <h1 className="tx-bold-5 ims-tx-dark flex ">
+                        New Unit
+                    </h1>
                 </div>
-            }
+                
+                {loadings != "" &&
+                    <div className='tx-lgx mt-200 flex flex-align-end flex-justify-center   flex-1'>
+                        <div className='ims-badge-faded mx-2 px-2 py-2 '>Loading</div>
+                        <div className=' px-2 py-2 '>Creating New Unit...</div>
+                    </div>
+                }
 
-            <div className="flex Q_xs_md_flex-col">
-                <UnitModalsSection unit={{uid:unit.uid,docs:unit.docs}} editMode={true}
-                    fileArrayMap={fileArrayMap} notesArray={notesArray} logsArray={logsArray}
-                    refetch={refetch}
-                />
-                <div className='pl-100 ml-6'></div>
-            </div>
-        </div>
-        {loadings != "creating" && <>
-            <div className="flex pt-2 pb-3"> 
-                <UnitTopForm {...{unit,updateNewData}} />
-            </div>
-            <hr/>
-        </>}
-        <main className="pt-8 mt-3 pos-rel" ref={$mainDOMObj}>
-            <div className={`flex  mt-8 pt-8   mr-100  pos-fixed top-0 right-0 z-500 `} >
-                <UnitSaveEditButtonLoadings editMode={true} refreshCount={refreshCount}
-                    isLoadingEditing={isLoadingEditing} isLoadingRefetching={isLoadingRefetching} 
-                    succesfulRequest={succesfulRequest} blockIfEditing={blockIfEditing} isCancelable={false} 
-                    cancelEdit={()=>{}} handleTopBottomSave={handleTopBottomSave}
-                />
+                <div className="flex Q_xs_md_flex-col">
+                    <UnitModalsSection unit={{uid:unit.uid,docs:unit.docs}} editMode={true}
+                        fileArrayMap={fileArrayMap} notesArray={notesArray} logsArray={logsArray}
+                        refetch={refetch}
+                    />
+                    <div className='pl-100 ml-6'></div>
+                </div>
             </div>
             {loadings != "creating" && <>
-                <UnitMainForm refetch={refetch} editMode={true}  isAddPage={true} 
-                    unit={unit} optMapObj={optMapObj} updateNewData={updateNewData}
-                />
-                <UnitBottomForm unit={unit} optMapObj={optMapObj} values={customFormValues}
-                    updateNewData={updateNewData} editMode={true} 
-                />
+                <div className="flex pt-2 pb-3"> 
+                    <UnitTopForm {...{unit,updateNewData}} />
+                </div>
+                <hr/>
             </>}
-            {loadings == "creating" && <>
-                <SectionPlaceholder/>
-            </>}
-            <div className='flex flex-justify-end'>
-                <UnitSaveEditButtonLoadings  editMode={true}
-                    isCancelable={false} isLoader={false} isLoadingEditing={isLoadingEditing}
-                    isLoadingRefetching={isLoadingRefetching} refreshCount={refreshCount}
-                    cancelEdit={()=>{}} succesfulRequest={succesfulRequest}
-                    blockIfEditing={blockIfEditing} handleTopBottomSave={handleTopBottomSave}
+            <div className="pt-8 mt-3 pos-rel" ref={$mainDOMObj}>
+                <div className={`flex  mt-8 pt-8   mr-100  pos-fixed top-0 right-0 z-500 `} >
+                    <UnitSaveEditButtonLoadings editMode={true} refreshCount={refreshCount}
+                        isLoadingEditing={isLoadingEditing} isLoadingRefetching={isLoadingRefetching} 
+                        succesfulRequest={succesfulRequest} blockIfEditing={blockIfEditing} isCancelable={false} 
+                        cancelEdit={()=>{}} handleTopBottomSave={handleTopBottomSave}
                     />
+                </div>
+                {loadings != "creating" && <>
+                    <UnitMainForm refetch={refetch} editMode={true}  isAddPage={true} 
+                        unit={unit} optMapObj={optMapObj} updateNewData={updateNewData}
+                    />
+                    <UnitBottomForm unit={unit} optMapObj={optMapObj} values={customFormValues}
+                        updateNewData={updateNewData} editMode={true} 
+                    />
+                </>}
+                {loadings == "creating" && <>
+                    <SectionPlaceholder/>
+                </>}
+                <div className='flex flex-justify-end'>
+                    <UnitSaveEditButtonLoadings  editMode={true}
+                        isCancelable={false} isLoader={false} isLoadingEditing={isLoadingEditing}
+                        isLoadingRefetching={isLoadingRefetching} refreshCount={refreshCount}
+                        cancelEdit={()=>{}} succesfulRequest={succesfulRequest}
+                        blockIfEditing={blockIfEditing} handleTopBottomSave={handleTopBottomSave}
+                        />
+                </div>
             </div>
-        </main>
-    </>}
+        </div>
+    </div>
+    }
     </>)
 }

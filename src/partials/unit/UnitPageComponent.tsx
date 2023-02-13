@@ -141,7 +141,7 @@ export const UnitPageComponent = ({
             </div>
             <hr/>
         </>}
-        <main className="pt-8 mt-3 pos-rel" ref={$mainDOMObj}>
+        <div className="pt-8 mt-3 pos-rel" ref={$mainDOMObj}>
             <div className={`flex  mt-8 pt-8   mr-100  pos-fixed top-0 right-0 z-500 `} >
                 <UnitSaveEditButtonLoadings editMode={editMode} refreshCount={refreshCount}
                     isLoadingEditing={isLoadingEditing} isLoadingRefetching={isLoadingRefetching} 
@@ -165,6 +165,6 @@ export const UnitPageComponent = ({
                     blockIfEditing={blockIfEditing} handleTopBottomSave={handleTopBottomSave}
                     />
             </div>
-        </main>
+        </div>
     </>)
 }

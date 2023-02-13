@@ -85,10 +85,10 @@ export default function UnitPage({
     if (q_unit.isLoading || !optMapObj) {
         return (
         <div className={`ims-body-wide w-100`}>
-            <main className="ims-body-inner">
+            <div className="ims-body-inner">
                 <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Detail`} />
                 <div className='py-6'><PagePlaceholder /></div>
-            </main>
+            </div>
         </div>
         )
     }
@@ -96,8 +96,8 @@ export default function UnitPage({
 
     return (<>
     <Head> <title>{`${id} | IMS`}</title> </Head>
-    <div className={`ims-body-wide w-100 px-8 Q_xs_sm_px-2`}>
-        <main className="ims-body-inner">
+    <div className={`ims-body-wide w-100 px-100 Q_xs_sm_px-2`}>
+        <div className="ims-body-inner">
             <BreadCrumbs pages={[["/inventory","Inventory"]]} current={`Detail`} />
 
             <div className="Q_xs_md my-2 invisible block">.</div>
@@ -107,7 +107,7 @@ export default function UnitPage({
                     unit={q_unit.data} docsArray={q_obj.docs} notesArray={q_obj.notes} logsArray={q_obj.logs}
                 />
             }
-        </main>
+        </div>
         <FooterLayout />
     </div>
     </>)
