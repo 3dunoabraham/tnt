@@ -1,4 +1,4 @@
-import { SalesStatusBadge } from '@/src/items/pages/unit/SalesStatusBadge';
+import { SalesStatusBadge } from '@/src/partials/unit/SalesStatusBadge';
 import { validateStringLength, validateInteger } from '@/scripts/helpers/validationHelper'
 import { InputText } from '@/src/items/atoms/InputText'
 // ReactFunctionComponent

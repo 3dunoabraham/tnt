@@ -3,11 +3,11 @@ import { BreadCrumbs } from "@/src/items/atoms/BreadCrumbs";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useContext, useMemo, useState } from "react";
-import InventoryPageComponent from '@/src/items/pages/inventory'
+import InventoryPageComponent from '@/src/partials/inventory'
 import { useQuery } from "@tanstack/react-query";
 import { fetchJsonArray } from "@/scripts/helpers/fetchHelper";
 import { API_UNITS } from "@/scripts/constants/api";
-import { LoadingInventory } from "@/src/items/pages/inventory/LoadingInventory";
+import { LoadingInventory } from "@/src/partials/inventory/LoadingInventory";
 
 export default function Component({}) {
     const app = useContext(AppContext)

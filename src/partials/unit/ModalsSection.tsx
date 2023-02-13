@@ -3,9 +3,9 @@ import { BsCollection, BsFileEarmark, BsPencilSquare } from "react-icons/bs";
 
 
 import { StandardModal } from "@/src/items/molecules/StandardModal";
-import { DocumentsCRUD } from "@/src/items/pages/unit/DocumentsCRUD";
-import { NotesCRUD } from "@/src/items/pages/unit/NotesCRUD";
-import { LogsCRUD } from "@/src/items/pages/unit/LogsCRUD";
+import { DocumentsCRUD } from "@/src/partials/unit/DocumentsCRUD";
+import { NotesCRUD } from "@/src/partials/unit/NotesCRUD";
+import { LogsCRUD } from "@/src/partials/unit/LogsCRUD";
 // ReactFunctionComponent
 export const UnitModalsSection = ({
     unit, editMode,

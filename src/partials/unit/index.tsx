@@ -8,12 +8,12 @@ import { dd  } from '@/scripts/helpers/devHelper';
 // import { DEFAULT_UNIT, IUnit } from '@/scripts/constants/unit'
 import { IUnit, DEFAULT_DOC_CATEGORIES } from '@/scripts/constants/unit'
 import { useUnloadHandler } from '@/scripts/helpers/useHooksHelper';
-import { UnitTopSummary } from '@/src/items/pages/unit/TopSummary'
-import { UnitMainForm } from '@/src/items/pages/unit/MainForm'
-import { UnitTopForm } from '@/src/items/pages/unit/TopForm'
-import { UnitBottomForm } from '@/src/items/pages/unit/BottomForm'
-import { UnitModalsSection } from '@/src/items/pages/unit/ModalsSection';
-import { UnitSaveEditButtonLoadings } from '@/src/items/pages/unit/SaveEditButtonLoadings';
+import { UnitTopSummary } from '@/src/partials/unit/TopSummary'
+import { UnitMainForm } from '@/src/partials/unit/MainForm'
+import { UnitTopForm } from '@/src/partials/unit/TopForm'
+import { UnitBottomForm } from '@/src/partials/unit/BottomForm'
+import { UnitModalsSection } from '@/src/partials/unit/ModalsSection';
+import { UnitSaveEditButtonLoadings } from '@/src/partials/unit/SaveEditButtonLoadings';
 import { API_UNIT_BASE } from '@/scripts/constants/api';
 import { parseChangedDataObj, PostData } from '@/scripts/helpers/fetchHelper';
 import { AppContext } from '@/scripts/contexts/AppContext';
