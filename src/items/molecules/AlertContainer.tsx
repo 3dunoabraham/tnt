@@ -15,11 +15,7 @@ export default function Component({
         s__msg("")
     }
 
-    return (
-        <div>
-            {msg != "" && 
-                <AlertNotification s__msg={s__msg} delay={delay} onHide={onHide} alertMsg={msg} badgeClass={badgeClass} />
-            }
-        </div>
-    )
+    if (msg != "") {
+        return <AlertNotification s__msg={s__msg} delay={delay} onHide={onHide} alertMsg={msg} badgeClass={badgeClass} />
+    }
 }

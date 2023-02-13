@@ -28,7 +28,6 @@ export default function Layout({ children }) {
 	},[alertMap])
 
 
-    
 
     return (
     <>
@@ -36,7 +35,8 @@ export default function Layout({ children }) {
         <Providers>
             <QueryClientProvider client={queryClient}>
                 <AppContext.Provider value={appValue}>
-                    <div className="z-999">
+                    {children}
+                    <div >
                         <AlertContainer {...{
                             s__msg: (val)=>(alertMap__do.set("neutral", val)), msg:alertMap.get("neutral")}} 
                         />
@@ -53,7 +53,6 @@ export default function Layout({ children }) {
                             badgeClass="ims-badge-error" 
                         />
                     </div>
-                    {children}
                 </AppContext.Provider>
             </QueryClientProvider>
         </Providers>
