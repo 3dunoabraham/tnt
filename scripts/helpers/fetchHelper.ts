@@ -1,9 +1,25 @@
-import { API_ORGS, API_ORG_TYPES, API_UNIT_BASE, API_UNIT_OPTS_BASE } from '@/scripts/constants/api';
+import { API_ORGS, API_ORG_TYPES, API_PEOPLE_BASE, API_UNIT_BASE, API_UNIT_OPTS_BASE } from '@/scripts/constants/api';
 import { rejects } from 'assert';
 import { DEFAULT_MODEL_STYLE_OBJARRAY, DEFAULT_UNIT_OPTS } from '@/scripts/constants/unit';
 import { dd } from '@/scripts/helpers/devHelper';
 import { isStrInteger, jstr2FullName } from '@/scripts/helpers/type/stringHelper';
 
+export const DEFAULT_UNIT_FOREIGNS:any = { sales_statuses: [], customersArray: [], orgsArray: [] }
+export async function fetchUnitForeigns() {
+    // console.log("fetchPageData 1", )
+    try {
+        let customersArray = await fetchJsonArray(API_PEOPLE_BASE+"customers", "Data")
+        // console.log("customersArray 1", customersArray)
+        let orgsArray = await fetchJsonArray(API_ORGS, "Orgs")
+        let { dealers } = await fetchAndParseOrgTypes(orgsArray)
+            
+        let sales_statuses = await fetchJsonArray(API_UNIT_OPTS_BASE+"sales_statuses")
+        // console.log("fetchPageData sales_statuses 1", sales_statuses)
+        return { customersArray, orgsArray, sales_statuses, dealers, }
+    } catch (err) {
+        return DEFAULT_UNIT_FOREIGNS
+    }
+}
 export async function fetchUnitOptsObj() {
     try {
         let model_styles = await fetchJsonArray(API_UNIT_OPTS_BASE+"model_styles", "Model Styles")
